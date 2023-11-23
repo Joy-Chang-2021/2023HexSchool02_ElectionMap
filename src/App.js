@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Flex, Center, Text } from "@chakra-ui/react";
+import Main from "components/Main";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Center w="100vw" h="100vh" flexDirection="column">
+      <Flex as="header" w="100vw" h={{ base: "64px", md: "72px" }}
+            align="center" color="#FFFFFF" bgColor="#262E49">
+        <Text ml={{ base: "24px", md: "47px" }} fontSize={{ base: "24px", md: "28px" }} pt="3px">2024 開票地圖</Text>
+      </Flex>
+      <Box w="100vw" h={{ base: "calc(100vh - 64px)", md: "calc(100vh - 72px)" }}>
+        <Main />
+      </Box>
+    </Center>
   );
 }
 
