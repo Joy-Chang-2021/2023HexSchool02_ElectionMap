@@ -1,6 +1,6 @@
-import { Box, Flex, Center, Text, Select, Icon, Image } from "@chakra-ui/react"
+import { Box, Flex, Center, Text, Select, Icon } from "@chakra-ui/react"
 import styled from "styled-components"
-import { Summary, Map } from "components"
+import { Summary, Map, Hint } from "components"
 import { Rotate } from "assets/icons"
 
 const StyledTab = styled(Box)`
@@ -46,7 +46,7 @@ export default function Main () {
 
 
     return (
-        <Flex direction="column" gap="20px" mx={{ base: "24px", md: "47px" }} mt="3vh"
+        <Flex direction="column" gap="20px" mx={{ base: "24px", md: "47px" }} my="3vh"
               align={{ base: "center", md: "flex-start" }}>
             {/* 選舉 */}
             <Flex gap="20px">
@@ -86,19 +86,17 @@ export default function Main () {
                     <Icon as={Rotate} w="24px" h="24px"/>
                 </Center>
             </Flex>
-            <Flex direction={{ base: "column", md: "row" }} gap={{ base: "20px", md: "0" }}
+            <Flex direction={{ base: "column", md: "row" }} gap={{ base: "20px", md: "10px" }}
                   w={{ base: "345px", md: "100%" }}
                   wrap="wrap" justify={{ md: "space-between" }}>
                 {/* 投票概況 */}
                 <Summary />
                 {/* 地圖 */}
-                <Box w={{ base: "100%", md: "calc(100% - 270px)" }} maxW="510px">
+                <Box w={{ base: "100%", md: "calc(100% - 280px)" }} maxW="510px">
                     <Map />
                 </Box>
                 {/* 提示 */}
-                <Box w={{ md: "540px", xl: "260px" }} bgColor="lightblue">
-                    提示
-                </Box>
+                <Hint />
             </Flex>
             
         </Flex>
