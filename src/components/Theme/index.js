@@ -16,6 +16,13 @@ const theme = extendTheme({
     // heading: "思源黑體, sans-serif",
     // body: "思源黑體, sans-serif"
   },
+  styles: {
+    global: {
+      body: {
+        bg: "#F5F5F5"
+      }
+    }
+  }
 })
 
 

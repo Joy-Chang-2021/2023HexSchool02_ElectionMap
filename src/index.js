@@ -3,6 +3,17 @@ import ReactDOM from 'react-dom/client';
 import Chakra from "components/Theme"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js"
+
+
+ChartJS.register(ArcElement)
+// ChartJS.register(ArcElement, Tooltip, Legend)
+// ChartJS.overrides.doughnut.plugins.legend = {
+//   display: false, // 隱藏圖例
+// }
+// ChartJS.overrides.doughnut.plugins.tooltip = {
+//   enabled: false, // 隱藏圖例
+// }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

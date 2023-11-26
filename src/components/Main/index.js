@@ -1,5 +1,6 @@
-import { Box, Flex, Center, Text, Select, Icon } from "@chakra-ui/react"
+import { Box, Flex, Center, Text, Select, Icon, Image } from "@chakra-ui/react"
 import styled from "styled-components"
+import { Summary, Map } from "components"
 import { Rotate } from "assets/icons"
 
 const StyledTab = styled(Box)`
@@ -45,7 +46,7 @@ export default function Main () {
 
 
     return (
-        <Flex direction="column" gap="20px" w="96vw" mx="auto" mt="3vh"
+        <Flex direction="column" gap="20px" mx={{ base: "24px", md: "47px" }} mt="3vh"
               align={{ base: "center", md: "flex-start" }}>
             {/* 選舉 */}
             <Flex gap="20px">
@@ -62,19 +63,19 @@ export default function Main () {
                       gap={{ base: "12px 8px", md: "20px" }}
                       wrap="wrap" justify="space-between">
                     <Box>
-                        <Select variant='outline'
+                        <Select variant='outline' bgColor="#FFF"
                                 w={{ base: "300px", md: "156px" }} h="36px"
                                 placeholder='請選擇'>
                             {CityList.map(city => <option key={city.value}>{city.label}</option>)}
                         </Select>
                     </Box>
                     <Box w={{ base: "calc((100% - 8px) / 2)", md: "calc((100% - 40px) / 3)" }}>
-                        <Select h="36px">
+                        <Select h="36px" bgColor="#FFF">
                             <option>地區</option>
                         </Select>
                     </Box>
                     <Box w={{ base: "calc((100% - 8px) / 2)", md: "calc((100% - 40px) / 3)" }} >
-                        <Select h="36px">
+                        <Select h="36px" bgColor="#FFF">
                             <option>鄰里</option>
                         </Select>
                     </Box>
@@ -89,13 +90,10 @@ export default function Main () {
                   w={{ base: "345px", md: "100%" }}
                   wrap="wrap" justify={{ md: "space-between" }}>
                 {/* 投票概況 */}
-                <Box w={{ base: "345px", md: "270px" }} bgColor="pink">
-                    投票概況
-                </Box>
+                <Summary />
                 {/* 地圖 */}
-                <Box w={{ base: "100%", md: "calc(100% - 270px)", xl: "510px" }} bgColor="grey"
-                     aspectRatio="510 / 700">
-                    地圖
+                <Box w={{ base: "100%", md: "calc(100% - 270px)" }} maxW="510px">
+                    <Map />
                 </Box>
                 {/* 提示 */}
                 <Box w={{ md: "540px", xl: "260px" }} bgColor="lightblue">
