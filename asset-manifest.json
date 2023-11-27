@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/2023HexSchool02_ElectionMap/static/js/main.b275da2a.js",
+    "static/js/787.f94e921f.chunk.js": "/2023HexSchool02_ElectionMap/static/js/787.f94e921f.chunk.js",
+    "index.html": "/2023HexSchool02_ElectionMap/index.html",
+    "static/media/rotate-cw.svg": "/2023HexSchool02_ElectionMap/static/media/rotate-cw.be17c83e744718501f715d5eb0f6a3f7.svg",
+    "static/media/info.svg": "/2023HexSchool02_ElectionMap/static/media/info.f55210cc8ae67bd21c0bb93a8b184f3b.svg",
+    "static/media/arrow-down.svg": "/2023HexSchool02_ElectionMap/static/media/arrow-down.579c3644ad4e4dfc0c9eb3e0dce92138.svg",
+    "static/media/arrow-right.svg": "/2023HexSchool02_ElectionMap/static/media/arrow-right.7c0aef4c197bba840b4971ec1deb8056.svg",
+    "main.b275da2a.js.map": "/2023HexSchool02_ElectionMap/static/js/main.b275da2a.js.map",
+    "787.f94e921f.chunk.js.map": "/2023HexSchool02_ElectionMap/static/js/787.f94e921f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b275da2a.js"
+  ]
+}
