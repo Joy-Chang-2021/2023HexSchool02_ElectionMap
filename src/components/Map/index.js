@@ -5,13 +5,11 @@ import { CityContext } from "components/Context/CityContext"
 
 const StyledPath = styled.path`
     cursor: pointer;
-    stroke-width: ${({$optionFocus}) => $optionFocus ? "5px" : "3px"};
-    stroke: ${({$color}) => $color || "#333"};
-    stroke-opacity: ${({$optionFocus}) => $optionFocus ? 1 : 0.5};
+    stroke-width: 3px;
+    stroke: ${({$color, $focus}) => ($focus && "#333") || $color || "#333"};
     fill: ${({$color}) => $color || "#333"};
-    fill-opacity: ${({$optionFocus}) => $optionFocus ? 0.7 : 0.3};
     &:hover {
-        fill: #555;
+        fill-opacity: 0.7;
     }
 `
 
@@ -26,7 +24,7 @@ export default function Map () {
                 <Tooltip label={site.Text} key={site.Id}>
                     <StyledPath 
                             $color={site.Color}
-                            $optionFocus={citySelect === site.Value}
+                            $focus={citySelect === site.Value}
                             onClick={() => setCitySelect(site.Value)}
                             xmlns="http://www.w3.org/2000/svg" d={site.Path}/>
                 </Tooltip>
